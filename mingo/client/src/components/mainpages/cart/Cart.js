@@ -1,7 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { GlobalState } from "../../../GlobalState";
 import axios from "axios";
-// import PaypalButton from "./PaypalButton";
 import StrikeCheckout from "react-stripe-checkout";
 
 function Cart() {
@@ -127,14 +126,12 @@ function Cart() {
         <h3>Total: ₹ {total}</h3>
 
         <StrikeCheckout
-          stripeKey="pk_test_51IxWAoSHvNQOQTE1Kzr8Nh4pkbFiFc7D6aYOUs1zn3XnmJ3wKTm893LAk4abdna4Ke5gH7ou5TXll1Mn9h0x6AFb001nA59rE6"
+          stripeKey="Enter your Stripe Key"
           token={handleToken}
           shippingAddress
           amount={total * 100}
           currency="INR"
         />
-
-        {/* <PaypalButton total={total} tranSuccess={tranSuccess} /> */}
       </div>
     </div>
   );
